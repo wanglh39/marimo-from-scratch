@@ -1,0 +1,298 @@
+:root {
+  --bg: #1e1e2e;
+  --bg-cell: #252537;
+  --bg-output: #1a1a2a;
+  --text: #cdd6f4;
+  --text-dim: #6c7086;
+  --accent: #89b4fa;
+  --green: #a6e3a1;
+  --red: #f38ba8;
+  --yellow: #f9e2af;
+  --border: #313244;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.connection {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.connection.connected {
+  color: var(--green);
+}
+
+.connection.disconnected {
+  color: var(--red);
+}
+
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-primary {
+  padding: 6px 14px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.notebook {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-dim);
+}
+
+.empty-state p {
+  margin: 4px 0;
+}
+
+.cell {
+  background: var(--bg-cell);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.cell-error {
+  border-color: var(--red);
+}
+
+.cell-stale {
+  border-color: var(--yellow);
+  border-style: dashed;
+}
+
+.cell-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+.cell-status {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.cell-done .cell-status {
+  color: var(--green);
+}
+
+.cell-error .cell-status {
+  color: var(--red);
+}
+
+.cell-stale .cell-status {
+  color: var(--yellow);
+}
+
+.cell-id {
+  color: var(--text-dim);
+  font-family: monospace;
+}
+
+.cell-tag {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: monospace;
+}
+
+.tag-def {
+  background: rgba(166, 227, 161, 0.15);
+  color: var(--green);
+}
+
+.tag-ref {
+  background: rgba(137, 180, 250, 0.15);
+  color: var(--accent);
+}
+
+.cell-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.btn-run {
+  padding: 3px 10px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-run:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-remove {
+  padding: 3px 8px;
+  background: transparent;
+  color: var(--text-dim);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-remove:hover {
+  color: var(--red);
+}
+
+.code-editor {
+  padding: 8px 12px;
+}
+
+.code-editor .cm-editor {
+  background: transparent;
+}
+
+.code-editor .cm-editor .cm-content {
+  caret-color: var(--accent);
+}
+
+.code-editor .cm-editor .cm-activeLineGutter {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cell-output {
+  padding: 8px 12px;
+  background: var(--bg-output);
+  border-top: 1px solid var(--border);
+}
+
+.cell-output pre {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.output-stdout {
+  color: var(--text);
+}
+
+.output-value {
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.output-error {
+  color: var(--red);
+  margin-top: 4px;
+}
+
+.graph-info {
+  text-align: center;
+  padding: 12px;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.cell-components {
+  padding: 8px 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.ui-component input[type='range'] {
+  flex: 1;
+  max-width: 300px;
+  accent-color: var(--accent);
+}
+
+.ui-button {
+  padding: 4px 12px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.ui-button:hover {
+  opacity: 0.85;
+}
+
+.ui-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.ui-checkbox input {
+  accent-color: var(--accent);
+}
+
+.ui-value {
+  color: var(--text-dim);
+  font-family: monospace;
+  font-size: 12px;
+}
