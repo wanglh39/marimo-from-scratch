@@ -4,7 +4,9 @@
 
 ## 这是什么？
 
-一个教学项目，用约 5000 行代码复刻 marimo 的核心功能，配套 40+ 章详尽文档，部署在 GitHub Pages。
+一个教学项目，用约 5000 行代码复刻 marimo 的核心功能，配套 46 章详尽文档（约 20 万字），部署在 GitHub Pages。
+
+**📖 在线文档**：https://wanglh39.github.io/marimo-from-scratch/
 
 ## 核心原理
 
@@ -44,9 +46,27 @@ cd frontend && npm install && npm run dev
 
 ### 文档站
 
+**在线阅读**：https://wanglh39.github.io/marimo-from-scratch/
+
+本地预览：
+
 ```bash
-cd docs && npm install && npm run dev      # 本地预览
+cd docs && npm install && npm run dev
 ```
+
+## 文档目录
+
+| 篇 | 章节 | 链接 |
+|---|---|---|
+| 第一篇：背景与动机 | ch01-05 | [目录](https://wanglh39.github.io/marimo-from-scratch/overview/ch01) |
+| 第二篇：Cell 与 AST 分析 | ch06-11 | [目录](https://wanglh39.github.io/marimo-from-scratch/cell-ast/ch06) |
+| 第三篇：DAG 构建 | ch12-16 | [目录](https://wanglh39.github.io/marimo-from-scratch/dag/ch12) |
+| 第四篇：执行引擎 | ch17-22 | [目录](https://wanglh39.github.io/marimo-from-scratch/execution/ch17) |
+| 第五篇：文件格式 | ch23-27 | [目录](https://wanglh39.github.io/marimo-from-scratch/file-format/ch23) |
+| 第六篇：通信协议 | ch28-31 | [目录](https://wanglh39.github.io/marimo-from-scratch/protocol/ch28) |
+| 第七篇：前端实现 | ch32-37 | [目录](https://wanglh39.github.io/marimo-from-scratch/frontend/ch32) |
+| 第八篇：UI 组件系统 | ch38-41 | [目录](https://wanglh39.github.io/marimo-from-scratch/ui-components/ch38) |
+| 第九篇：部署与延伸 | ch42-46 | [目录](https://wanglh39.github.io/marimo-from-scratch/deployment/ch42) |
 
 ## 项目结构
 
@@ -68,7 +88,7 @@ backend/
 │   └── webapp.py          FastAPI + WebSocket
 ├── app.py             ← App 类 (.py notebook 直接运行)
 frontend/              ← React + TypeScript + CodeMirror 6
-docs/                  ← VitePress 文档站 (40+ 章)
+docs/                  ← VitePress 文档站 (46 章)
 tests/                 ← 79 个测试
 examples/              ← 3 个 demo
 ```
