@@ -9,7 +9,7 @@ hero:
       link: /overview/ch01
     - theme: alt
       text: GitHub
-      link: https://github.com/marimo-team/marimo
+      link: https://github.com/wanglh39/marimo-from-scratch
 ---
 
 ## 这是什么？

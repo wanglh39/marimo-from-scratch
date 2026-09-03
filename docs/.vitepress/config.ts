@@ -7,7 +7,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: 'GitHub', link: 'https://github.com/marimo-team/marimo' },
+      { text: 'GitHub', link: 'https://github.com/wanglh39/marimo-from-scratch' },
     ],
     sidebar: [
       {
@@ -112,7 +112,7 @@ export default defineConfig({
       },
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/marimo-team/marimo' },
+      { icon: 'github', link: 'https://github.com/wanglh39/marimo-from-scratch' },
     ],
   },
 })
