@@ -1,4 +1,6 @@
 ---
+layout: home
+
 hero:
   name: marimo-from-scratch
   text: 从零实现 reactive notebook
@@ -10,6 +12,20 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/wanglh39/marimo-from-scratch
+
+features:
+  - icon: 🔄
+    title: Reactive 执行引擎
+    details: AST 静态分析提取 defs/refs → 构建 DAG → 拓扑排序 + 增量执行 + 短路
+  - icon: 🐍
+    title: Pure Python 文件格式
+    details: .py 文件即 notebook，git diff 友好，告别 .ipynb JSON
+  - icon: 🌐
+    title: WebSocket + React 前端
+    details: FastAPI 后端 + React 19 + CodeMirror 6 编辑器
+  - icon: 🎛️
+    title: UI 组件系统
+    details: Slider/Button/Checkbox reactive binding，notebook 即 web app
 ---
 
 ## 这是什么？
