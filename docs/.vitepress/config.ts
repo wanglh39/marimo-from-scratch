@@ -1,9 +1,15 @@
 import { defineConfig } from 'vitepress'
+import mathjax3 from 'markdown-it-mathjax3'
 
 export default defineConfig({
   title: 'marimo-from-scratch',
   description: '从零实现 marimo：理解 reactive notebook 的底层原理与设计哲学',
   lang: 'zh-CN',
+  markdown: {
+    config: (md) => {
+      md.use(mathjax3)
+    },
+  },
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
