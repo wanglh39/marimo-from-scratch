@@ -35,6 +35,12 @@ jobs:
         run: npm run build
         working-directory: docs
 
+      - name: List generated files
+        run: find docs/.vitepress/dist -name "*.html" | sort | head -60
+
+      - name: Add .nojekyll
+        run: touch docs/.vitepress/dist/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
