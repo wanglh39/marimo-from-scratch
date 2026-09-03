@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'marimo-from-scratch',
   description: '从零实现 marimo：理解 reactive notebook 的底层原理与设计哲学',
   lang: 'zh-CN',
+  cleanUrls: true,
   markdown: {
     config: (md) => {
       md.use(mathjax3)
